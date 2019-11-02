@@ -25,10 +25,7 @@ public class MainActivity extends AppCompatActivity {
         init();
 
 
-        char[] b =  {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 
-        int szo = rand.nextInt(10);
-        betuk.setText(hossz[szo]);
 
         le.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,26 +54,44 @@ public class MainActivity extends AppCompatActivity {
                 betu.setText(b,betuallas,1);
             }
         });
+        tipp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        switch (eletero){
-            case 0 : kep.setImageResource(R.drawable.akasztofa00);break;
-            case 1 : kep.setImageResource(R.drawable.akasztofa01);break;
-            case 2 : kep.setImageResource(R.drawable.akasztofa02);break;
-            case 3 : kep.setImageResource(R.drawable.akasztofa03);break;
-            case 4 : kep.setImageResource(R.drawable.akasztofa04);break;
-            case 5 : kep.setImageResource(R.drawable.akasztofa05);break;
-            case 6 : kep.setImageResource(R.drawable.akasztofa06);break;
-            case 7 : kep.setImageResource(R.drawable.akasztofa07);break;
-            case 8 : kep.setImageResource(R.drawable.akasztofa08);break;
-            case 9 : kep.setImageResource(R.drawable.akasztofa09);break;
-            case 10 : kep.setImageResource(R.drawable.akasztofa10);break;
-            case 11 : kep.setImageResource(R.drawable.akasztofa11);break;
-            case 12 : kep.setImageResource(R.drawable.akasztofa12);break;
-            case 13 : kep.setImageResource(R.drawable.akasztofa13);break;
-            default: break;
+                int szo = rand.nextInt(10);
+                betuk.setText(szavak[szo]);
+                for (int i = 0; i < szavak[szo].length();i++){
+                        if (szavak[szo].toUpperCase().charAt(i) == betu.getText().charAt(0)){
+                        betuk.setText("Alma");
+                        }else{
+                            eletero++;
+                        }
+
+                }
+
+                switch (eletero){
+                    case 0 : kep.setImageResource(R.drawable.akasztofa00);break;
+                    case 1 : kep.setImageResource(R.drawable.akasztofa01);break;
+                    case 2 : kep.setImageResource(R.drawable.akasztofa02);break;
+                    case 3 : kep.setImageResource(R.drawable.akasztofa03);break;
+                    case 4 : kep.setImageResource(R.drawable.akasztofa04);break;
+                    case 5 : kep.setImageResource(R.drawable.akasztofa05);break;
+                    case 6 : kep.setImageResource(R.drawable.akasztofa06);break;
+                    case 7 : kep.setImageResource(R.drawable.akasztofa07);break;
+                    case 8 : kep.setImageResource(R.drawable.akasztofa08);break;
+                    case 9 : kep.setImageResource(R.drawable.akasztofa09);break;
+                    case 10 : kep.setImageResource(R.drawable.akasztofa10);break;
+                    case 11 : kep.setImageResource(R.drawable.akasztofa11);break;
+                    case 12 : kep.setImageResource(R.drawable.akasztofa12);break;
+                    case 13 : kep.setImageResource(R.drawable.akasztofa13);break;
+                    default: break;
 
 
-        }
+                }
+            }
+        });
+
+
 
     }
 
