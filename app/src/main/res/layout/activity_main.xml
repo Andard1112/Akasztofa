@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/top"
+        >
+
+        <Button
+            android:id="@+id/le"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="0"
+            android:background="@drawable/buttonbackround"
+            android:text="-" />
+
+    <TextView
+        android:id="@+id/betu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A"
+        android:textSize="40dp"
+
+        />
+
+        <Button
+            android:id="@+id/fel"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/buttonbackround"
+
+            android:text="+" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tip"
+        android:orientation="horizontal"
+        android:layout_below="@id/top"
+        android:gravity="center"
+
+        >
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TIPPEL"
+            android:id="@+id/tipp"
+            />
+
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_centerInParent="true"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/kep"
+        android:src="@drawable/akasztofa00"
+        />
+
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="asd" />
+
+    </LinearLayout>
+
+</RelativeLayout>
